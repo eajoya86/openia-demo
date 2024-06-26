@@ -4,4 +4,4 @@
   "exec": "concurrently \"npx tsc --watch\" \"ts-node src/index.ts\"",
   "exclude": ["node_modules"]
 }
-//  concurrently, which facilitates the execution of multiple commands, such as nodemon, npx, tsc, etc., allowing you to combine different functionalities.
+//  "concurrently", which facilitates the execution of multiple commands, such as nodemon, npx, tsc, etc., allowing you to combine different functionalities.
