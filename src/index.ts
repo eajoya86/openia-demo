@@ -16,7 +16,6 @@ const agent = new Agent({ apiKey: process.env.OPENAI_API_KEY });
 app.get('/ask', async (req: Request, res: Response) => {
   try {
     const question = req.query.question;
-
     const response = await agent.ask(question as string);
     res.json({ question: question, answer: response });
   } catch (error: any) {

@@ -1,29 +1,26 @@
 import OpenIA from 'openai';
+import { createPrompt } from './prompt';
 
 class Agent {
   openai;
-  EMBEDDING_MODEL = 'text-embedding-3-small';
-  GPT_MODEL = 'gpt-3.5-turbo-0125';
+  private readonly EMBEDDING_MODEL = 'text-embedding-3-small';
+  private readonly GPT_MODEL = 'gpt-3.5-turbo-0125';
 
   constructor(config: { apiKey: string | undefined }) {
     this.openai = new OpenIA(config);
   }
 
-  systemPrompt = `You are Sales Development Representative (SDR) agent that works at Scio Consulting company.
-
-  SDRs need a variety of skills to succeed, including communication, prospecting, and time management:
-  * Communication: SDRs need to be able to clearly communicate and listen actively to build trust and rapport with potential customers. Active listening is especially important for SDRs to understand what prospects are saying and their intentions.
-  * Prospecting: SDRs need to be well-versed in sales tactics, including knowing when to ask questions, what buying signals to look for, and how to pique customers' interest.`;
-
+  /**
+   * Asks a question to the OpenAI chat model and returns the response.
+   * @param question - The question to ask the chat model.
+   * @returns A Promise that resolves to the response from the chat model.
+   */
   async ask(question: string): Promise<string> {
     const response = await this.openai.chat.completions.create({
-      messages: [
-        { role: 'system', content: this.systemPrompt },
-        { role: 'user', content: question },
-      ],
+      messages: createPrompt(question),
       model: this.GPT_MODEL,
       max_tokens: 150,
-      temperature: 1,
+      temperature: 0.7,
     });
     console.log(
       `Model: ${response.model}, Usage: ${JSON.stringify(response.usage)}`
