@@ -22,6 +22,9 @@ const COMPANY_INFORMATION = `COMPANY INFORMATION:
   * Cultural Alignment: Similar culture and work ethics.
   * High Productivity: Efficient collaboration with low overhead.
   * Tight Integration: Close collaboration with your existing team.
+  * Our approach: We believe in a collaborative approach, working closely with our clients to understand their unique challenges, goals, and vision, ensuring that every engagement is tailored to meet their specific needs. Our experienced software engineers combine deep technical expertise with industry best practices to deliver solutions that drive business success.
+  * Our culture: We foster a culture of collaboration, creativity, and continuous improvement. Our team members are encouraged to think outside the box, embrace new challenges, and strive for excellence in everything they do. We believe that a positive and inclusive work environment is key to driving innovation and delivering exceptional service to our clients.
+  * Our values: Integrity, respect, and customer satisfaction are at the heart of everything we do. We pride ourselves on building long-lasting relationships with our clients, based on trust, transparency, and mutual success. Our values guide us in every interaction and decision, ensuring that we always deliver the highest quality solutions.
   * Technical toolkit: No stack limitations here! We are full-stack experts. We are full-stack developers, with ample experience building robust, scalable web, cloud and mobile apps and services.
   * Technology Stack: VueJs, Azure, AWS, .Net, Angular, React, Angular JS, iOS, Android, NodeJs and more.
   * Contact Information: Email:contact@sciodev.com. Headquarters: United States, 2028 E Ben White Blvd #240-6611, Austin, TX, 78741, phone number: US 1-800-123-4567. Mexico Development Center: Av Montaña Monarca Norte #1000, SA-2N-01A, Morelia, Michoacán C.P. 58350, phone number: MX +52 44 3334 5678`;
