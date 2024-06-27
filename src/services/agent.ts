@@ -3,8 +3,7 @@ import { createPrompt } from './prompt';
 
 class Agent {
   openai;
-  private readonly EMBEDDING_MODEL = 'text-embedding-3-small';
-  private readonly GPT_MODEL = 'gpt-3.5-turbo-0125';
+  GPT_MODEL = 'gpt-3.5-turbo-0125';
 
   constructor(config: { apiKey: string | undefined }) {
     this.openai = new OpenIA(config);
